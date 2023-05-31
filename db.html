@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Database Connectivity</title>
+    <script>
+        fetch('/your_node_script')
+            .then(response => response.json())
+            .then(data => {
+                // Display the data on the HTML page
+                document.getElementById('result').innerHTML = JSON.stringify(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    </script>
+</head>
+
+<body>
+    <h1>Database Connectivity</h1>
+    <div id="result"></div>
+</body>
+
+</html>
